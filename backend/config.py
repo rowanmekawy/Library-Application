@@ -1,8 +1,6 @@
 import os
 class Config:
     MONGO_URI = os.environ.get('MONGODB_URI') or "mongodb://mongo:27017/mylibrary"
-    # MONGO_URI = os.environ.get('MONGODB_URI') or "mongodb://172.17.0.1:27017/mylibrary"
-    print("zzzzzzzzzzzzzzzzzzzzzzzzzmlkmlkmkmmmmmmmmmmmmmmongo:27017mmmmzzzzzzMongoDB URI:", MONGO_URI)
 
 class TestingConfig(Config):
     TESTING = True
