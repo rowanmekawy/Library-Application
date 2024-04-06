@@ -22,10 +22,8 @@ book_model_response = api.model('Book', {
 
 @api.route('/api/books')
 class BookList(Resource):
-    print("****************************************************")
     @api.marshal_list_with(book_model_response)
     def get(self):
-        print("mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm")
         books_data = Book.objects.all()
         return [book.to_mongo().to_dict() for book in books_data]
 
